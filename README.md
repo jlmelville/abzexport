@@ -15,7 +15,20 @@ analysis and visualization.
 *August 11 2018*. This should be functional, but it's incredibly crude (you can't choose what to export, the location
 of the output file or even what the filename should be called).
 
-## Building
+## Plugin JAR
+
+If you just want to get hold of the plugin jar without building it, download a release and look in the `dist` directory.
+
+## Deploying the plugin
+
+Copy the `abzexport-<version>.jar` file into your `plugins` directory. On my Windows 10 installation, it's in the user's 
+`AppData\Local\tagtraum industries\beaTunes\plugins` directory, rather than where Beatunes itself is installed.
+If you can find a directory containing the `sameartistdifferentgrouping-1.0.2.jar` file, that's where it should go.
+
+If the plugin was installed correctly, inside Beatunes, go to Edit > Preferences > Plugins, 
+and on the Installed tab should be a plugin called 'AcousticBrainz Export'.
+
+## Building From Source
 
 I use [Gradle](https://gradle.org) to build the plugin, because I don't have much experience with
 [Maven](https://maven.apache.org). This required a trivial change to `plugin.xml` (see the
@@ -31,16 +44,7 @@ Linux:
 ./gradlew build
 ```
 
-You can find the built JAR file as `build/libs/abzexport-<version>.jar`.
-
-## Deploying the plugin
-
-Copy the `abzexport-<version>.jar` file into your `plugins` directory. On my Windows 10 installation, it's in the user's 
-`AppData\Local\tagtraum industries\beaTunes\plugins` directory, rather than where Beatunes itself is installed.
-If you can find a directory containing the `sameartistdifferentgrouping-1.0.2.jar` file, that's where it should go.
-
-If the plugin was installed correctly, inside Beatunes, go to Edit > Preferences > Plugins, 
-and on the Installed tab should be a plugin called 'AcousticBrainz Export'.
+You can find the built JAR file as `build/libs/abzexport-<version>.jar`. It should be the same as the one in the `dist` file. The gradle `dist` task simply copies that into the `dist` directory.
 
 ## Running
 
