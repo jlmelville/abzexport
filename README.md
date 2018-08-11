@@ -58,6 +58,7 @@ are not kept because these are variable length.
 
 Here's how to import the data into R and Python:
 
+R:
 ```R
 # base reader
 music_data <- read.delim("/path/to/out.tsv")
@@ -67,6 +68,7 @@ music_data <- read_delim("/path/to/out.tsv",
     "\t", escape_double = FALSE, trim_ws = TRUE)
 ```
 
+Python:
 ```python
 import pandas as pd
 music_data = pd.read_csv("/path/to/out.tsv", sep='\t')
@@ -87,7 +89,7 @@ I would welcome any help, pull requests and so on to make this happen.
 
 ## License
 
-[AGPL-3](https://www.gnu.org/licenses/agpl-3.0.txt), in keeping with that of  
-[AcousticBrainzSubmit](https://github.com/beatunes/plugin-samples/tree/master/abzsubmit). Note that the repo README 
-says that it's [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/), but the plugin information 
-displayed inside Beatunes says it's AGPL-3, so I've gone with the more restrictive license.
+[AGPL-3](https://www.gnu.org/licenses/agpl-3.0.txt),
+in keeping with that of [AcousticBrainzSubmit](https://github.com/beatunes/plugin-samples/tree/master/abzsubmit). 
+Note that the repo README says that it's [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/), 
+but the plugin information displayed inside Beatunes says it's AGPL-3, so I've gone with the more restrictive license.
