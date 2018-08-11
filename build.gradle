@@ -1,0 +1,31 @@
+apply plugin: 'java'
+
+group = 'com.github.jlmelville'
+version = '0.1'
+
+description = """beaTunes plugin that writes AcousticBrainz fingerprints to disk"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+    maven { url "https://www.beatunes.com/repo/maven2" }
+    maven { url "http://repo.maven.apache.org/maven2" }
+}
+
+dependencies {
+    compile(group: 'com.tagtraum', name: 'beatunes', version:'5.0.0') {
+        exclude(module: 'jai-codec')
+        exclude(module: 'jai-core')
+        exclude(module: 'mac_widgets')
+        exclude(module: 'jaudiotagger')
+        exclude(module: 'jta')
+    }
+}
+
+processResources {
+    filesMatching("**/plugin.xml") {
+        expand project.properties
+    }
+}

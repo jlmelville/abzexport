@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This file contains a list of plugins to be instantiated by beaTunes -->
+<plugins>
+    <name>AcousticBrainz Export</name>
+    <id>abzexport</id>
+    <version>${version}</version>
+    <description>Analysis task that executes the AcousticBrainz feature extractor and writes the results to disk.
+    </description>
+    <license>
+        <name>GNU Affero General Public License 3.0</name>
+        <url>https://www.gnu.org/licenses/agpl-3.0.txt</url>
+    </license>
+    <change-notes>0.1
+        - First release.
+    </change-notes>
+    <vendor>
+        <name>James Melville</name>
+        <url>http://github.com/jlmelville/abzexport/</url>
+        <email>jlmelville@gmail.com</email>
+    </vendor>
+    <beatunes-version>
+        <min>5.0.0</min>
+        <max>5.9.9</max>
+    </beatunes-version>
+
+    <!-- Analysis Tasks -->
+    <plugin class="com.github.jlmelville.abzexport.AcousticBrainzExport"/>
+</plugins>
