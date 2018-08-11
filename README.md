@@ -17,7 +17,9 @@ of the output file or even what the filename should be called).
 
 ## Plugin JAR
 
-If you just want to get hold of the plugin jar without building it, download a release and look in the `dist` directory.
+If you just want to get hold of the plugin jar without building it, download a 
+[release](https://github.com/jlmelville/abzexport/releases), unzip it and look in the `dist` directory,
+where you should see a `abzexport-<version>.jar`.
 
 ## Deploying the plugin
 
