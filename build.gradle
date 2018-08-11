@@ -29,3 +29,8 @@ processResources {
         expand project.properties
     }
 }
+
+task dist(type: Copy, group: "Custom", description: "Copies jar to the dist directory") {
+    from "build/libs"
+    into "dist"
+}
